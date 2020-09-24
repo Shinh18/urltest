@@ -1,0 +1,30 @@
+{
+  "name": "urltester",
+  "version": "1.0.0",
+  "description": "Command-line tool for finding and reporting dead links (e.g., broken URLs) in a file",
+  "main": "index.js",
+  "bin": {
+    "urltester": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shinh18/urltest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shinh18/urltest/issues"
+  },
+  "homepage": "https://github.com/Shinh18/urltest#readme",
+  "dependencies": {
+    "boxen": "^4.2.0",
+    "chalk": "^4.1.0",
+    "fetch": "^1.1.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
