@@ -11,7 +11,7 @@ Command-line tool for finding and reporting dead links (e.g., broken URLs) in a 
     * This command enables the tool to search for all the links in the file, make network requests and prints out the url with their respective status code
 * ```urltester -v | version ```
     * Using either v or version command, you can see the tool name and current version
-* urltester
+* ```urltester```
     * This command displays a standard usage manual which shows how to use the tool as well as the command line arguments available
 
 ## Features
