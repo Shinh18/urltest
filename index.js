@@ -25,7 +25,7 @@ const messageOne = () => {
 const version = boxen(chalk.redBright.bold("Urltester 1.0.0"), boxenOptions);
 
 if(process.argv.length == 2 ) messageOne();
-else if(process.argv[2] === "v" || process.argv[2] === "version" || process.argv[2] === "-v") {
+else if(process.argv[2] === "version" || process.argv[2] === "-v") {
     console.log(version);
 }    
 else {      
