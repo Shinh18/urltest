@@ -24,6 +24,33 @@ const messageOne = () => {
 
 const version = boxen(chalk.redBright.bold("Urltester 1.0.0"), boxenOptions);
 
+const coloredOutput = (urlArray) => {
+    for(var item of urlArray) {      
+        if(item.status == '200') {
+            console.log(chalk.green.bold(` ${item.status}: ${item.url} `));
+        }
+        else if(item.status == '400' || item.status == '404') {
+            console.log(chalk.red.bold(` ${item.status}: ${item.url} `));
+        }
+        else 
+            console.log(chalk.grey.bold(` ${item.status}: ${item.url} `));           
+    }
+}
+
+const checkUrl = async (url) => {
+    var jsonOutput = [];
+    var urlElement;
+    try{
+        const res = await fetch(url,{method: "HEAD", timeout: 1500});
+        urlElement = { url: `${url}`, status: `${res.status}` };
+        jsonOutput.push(urlElement);
+    } catch(error) {
+        urlElement = { url: `${url}`, status: '404' }
+        jsonOutput.push(urlElement)
+    }
+    return urlElement
+}
+
 if(process.argv.length == 2 ) messageOne();
 else if(process.argv[2] === "version" || process.argv[2] === "-v") {
     console.log(version);
@@ -31,25 +58,21 @@ else if(process.argv[2] === "version" || process.argv[2] === "-v") {
 else {      
     const filePath = path.join(__dirname,process.argv[2]);
     fs.readFile(filePath,'utf-8', function(err, data) {
-    if(err) console.log(chalk.red("Unsuccesful to read file"), err)
-    else {
-        const urlArr = data.match(/(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/gi);
-                
-        urlArr.forEach((url) => {
-            //network request of url
-            fetch(url,{method: "HEAD", timeout: 1500})
-            .then((response) => {
-            if(response.status == 200) console.log(chalk.green(response.status, url));
-                        
-            else if(response.status == 400 || response.status == 404) console.log(chalk.red(response.status, url));
-        
-            else console.log(chalk.gray(response.status, url) );
-            })
-            .catch((error) => {
-            console.log(chalk.red("404", url));  
-            });
-        });
-    }
-});
-
+        if(err) console.log(chalk.red("Unsuccesful to read file"), err)    
+        else {
+            const urlArr = data.match(/(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/gi);
+            const promises = urlArr.map(checkUrl);
+            Promise
+                .all(promises)
+                .then(results => {
+                    if(process.argv[3] === '-j' || process.argv[3] === '--json' || process.argv[3] === '\j' ){
+                        console.log(JSON.stringify(results));
+                    }
+                    else 
+                        coloredOutput(results);
+                })
+                .catch(err => 
+                    console.log("Error message: ", err) );
+        }
+    });
 }
