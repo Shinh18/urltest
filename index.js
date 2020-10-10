@@ -24,6 +24,7 @@ const messageOne = () => {
 
 const version = boxen(chalk.redBright.bold("Urltester 1.0.0"), boxenOptions);
 
+statusCode = 0;
 if(process.argv.length == 2 ) messageOne();
 else if(process.argv[2] === "version" || process.argv[2] === "-v") {
     console.log(version);
@@ -36,14 +37,19 @@ else {
         const urlArr = data.match(/(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/gi);
                 
         urlArr.forEach((url) => {
-            //network request of url
             fetch(url,{method: "HEAD", timeout: 1500})
             .then((response) => {
-            if(response.status == 200) console.log(chalk.green(response.status, url));
-                        
-            else if(response.status == 400 || response.status == 404) console.log(chalk.red(response.status, url));
-        
-            else console.log(chalk.gray(response.status, url) );
+            if(response.status == 200) {
+                console.log(chalk.green(response.status, url));
+            }
+            else if(response.status == 400 || response.status == 404) {
+                console.log(chalk.red(response.status, url));
+                statusCode = 1;
+            } 
+            else {
+                console.log(chalk.gray(response.status, url));
+                statusCode = 1;
+            }
             })
             .catch((error) => {
             console.log(chalk.red("404", url));  
@@ -51,5 +57,9 @@ else {
         });
     }
 });
-
+//
 }
+process.exit(statusCode);
+process.on('exit', function(statusCode) {
+    console.log("Program exited with code", statusCode)
+});
