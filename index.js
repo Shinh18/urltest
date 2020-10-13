@@ -5,6 +5,9 @@ const boxen = require("boxen");
 const fetch = require("node-fetch");
 const fs = require("fs");
 const path = require("path");
+var displayAll = true;
+var displayGood = false;
+var displayBad = false;
 
 const boxenOptions = {
     padding: 1,
@@ -29,7 +32,7 @@ const coloredOutput = (urlArray) => {
         if(item.status == '200') {
             console.log(chalk.green.bold(` ${item.status}: ${item.url} `));
         }
-        else if(item.status == '400' || item.status == '404') {
+        else if((item.status == '400' || item.status == '404') ){
             console.log(chalk.red.bold(` ${item.status}: ${item.url} `));
         }
         else 
@@ -60,7 +63,7 @@ else {
     fs.readFile(filePath,'utf-8', function(err, data) {
         if(err) console.log(chalk.red("Unsuccesful to read file"), err)    
         else {
-            const urlArr = data.match(/(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/gi);
+            const urlArr = data.match(/(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/gi);         
             const promises = urlArr.map(checkUrl);
             Promise
                 .all(promises)
@@ -68,11 +71,24 @@ else {
                     if(process.argv[3] === '-j' || process.argv[3] === '--json' || process.argv[3] === '\j' ){
                         console.log(JSON.stringify(results));
                     }
-                    else 
-                        coloredOutput(results);
+                    else if(process.argv[3] === '--all'){
+                            displayAll = true;
+                            displayGood = true;
+                            displayBad = true;
+                    }
+                    else if(process.argv[3] === '--good' ) {
+                            displayGood = true;
+                            displayAll = false;
+                    }
+                    else if(process.argv[3] === '--bad' ) {
+                            displayBad = true;
+                            displayGood = false;
+                    }
+                    else coloredOutput(results);
                 })
                 .catch(err => 
                     console.log("Error message: ", err) );
         }
     });
 }
+
