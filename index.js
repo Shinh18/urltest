@@ -5,7 +5,17 @@ const boxen = require("boxen");
 const fetch = require("node-fetch");
 const fs = require("fs");
 const path = require("path");
+const { createBrotliCompress } = require("zlib");
+const CLICOLOR = process.env.CLICOLOR
+//var color;
 
+/*if(CLICOLOR===0){
+    color = chalk.constructor({ enabled: false});
+}
+else if(CLICOLOR===1){
+    color = chalk.constructor({ enabled: true});
+}
+*/
 const boxenOptions = {
     padding: 1,
     margin: 1,
@@ -15,16 +25,32 @@ const boxenOptions = {
 }
 
 const messageOne = () => {
-    console.log(chalk.red("\n                Standard user manual                "));
-    console.log((chalk.gray("----------------------------------------------------"))); 
-    console.log(chalk.redBright("urltester filename   -"), "reports good,bad,unknown urls"); 
-    console.log(chalk.redBright("urltester v |version -"), "displays tool version"); 
-    console.log((chalk.redBright("----------------------------------------------------\n"))); 
+    console.log(color.red("\n                Standard user manual                "));
+    console.log((color.gray("----------------------------------------------------"))); 
+    console.log(color.redBright("urltester filename   -"), "reports good,bad,unknown urls"); 
+    console.log(color.redBright("urltester v |version -"), "displays tool version"); 
+    console.log((color.redBright("----------------------------------------------------\n"))); 
 }; 
 
-const version = boxen(chalk.redBright.bold("Urltester 1.0.0"), boxenOptions);
-
-statusCode = 0;
+const version = boxen(color.redBright.bold("Urltester 1.0.0"), boxenOptions);
+/*
+const printOutput = (status, res) => {
+    if(CLICOLOR=0){
+        if(status == 200) {
+            console.log(status, res);
+        }
+        else if(status == 400 || status == 404) {
+            console.log(status, res);
+        } 
+        else {
+            console.log(status,res);
+        }
+    } 
+    else{
+        
+    }
+}
+*/
 if(process.argv.length == 2 ) messageOne();
 else if(process.argv[2] === "version" || process.argv[2] === "-v") {
     console.log(version);
@@ -32,34 +58,28 @@ else if(process.argv[2] === "version" || process.argv[2] === "-v") {
 else {      
     const filePath = path.join(__dirname,process.argv[2]);
     fs.readFile(filePath,'utf-8', function(err, data) {
-    if(err) console.log(chalk.red("Unsuccesful to read file"), err)
+    if(err) console.log(("Unsuccesful to read file"), err)
     else {
         const urlArr = data.match(/(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/gi);
-                
         urlArr.forEach((url) => {
             fetch(url,{method: "HEAD", timeout: 1500})
             .then((response) => {
-            if(response.status == 200) {
-                console.log(chalk.green(response.status, url));
-            }
-            else if(response.status == 400 || response.status == 404) {
-                console.log(chalk.red(response.status, url));
-                statusCode = 1;
-            } 
-            else {
-                console.log(chalk.gray(response.status, url));
-                statusCode = 1;
-            }
+                if(response.status == 200) {
+                    console.log(chalk.green(response.status, url));
+                }
+                else if(response.status == 400 || response.status == 404) {
+                    console.log(chalk.red(response.status, url));
+                } 
+                else {
+                    console.log(chalk.gray(response.status, url));
+                } 
             })
             .catch((error) => {
-            console.log(chalk.red("404", url));  
+                console.log(chalk.red("404", url)); 
             });
         });
     }
 });
 //
 }
-process.exit(statusCode);
-process.on('exit', function(statusCode) {
-    console.log("Program exited with code", statusCode)
-});
+
