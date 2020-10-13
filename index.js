@@ -5,17 +5,10 @@ const boxen = require("boxen");
 const fetch = require("node-fetch");
 const fs = require("fs");
 const path = require("path");
-const { createBrotliCompress } = require("zlib");
-const CLICOLOR = process.env.CLICOLOR
-//var color;
+var displayAll = true;
+var displayGood = false;
+var displayBad = false;
 
-/*if(CLICOLOR===0){
-    color = chalk.constructor({ enabled: false});
-}
-else if(CLICOLOR===1){
-    color = chalk.constructor({ enabled: true});
-}
-*/
 const boxenOptions = {
     padding: 1,
     margin: 1,
@@ -25,32 +18,15 @@ const boxenOptions = {
 }
 
 const messageOne = () => {
-    console.log(color.red("\n                Standard user manual                "));
-    console.log((color.gray("----------------------------------------------------"))); 
-    console.log(color.redBright("urltester filename   -"), "reports good,bad,unknown urls"); 
-    console.log(color.redBright("urltester v |version -"), "displays tool version"); 
-    console.log((color.redBright("----------------------------------------------------\n"))); 
+    console.log(chalk.red("\n                Standard user manual                "));
+    console.log((chalk.gray("----------------------------------------------------"))); 
+    console.log(chalk.redBright("urltester filename   -"), "reports good,bad,unknown urls"); 
+    console.log(chalk.redBright("urltester v |version -"), "displays tool version"); 
+    console.log((chalk.redBright("----------------------------------------------------\n"))); 
 }; 
 
-const version = boxen(color.redBright.bold("Urltester 1.0.0"), boxenOptions);
-/*
-const printOutput = (status, res) => {
-    if(CLICOLOR=0){
-        if(status == 200) {
-            console.log(status, res);
-        }
-        else if(status == 400 || status == 404) {
-            console.log(status, res);
-        } 
-        else {
-            console.log(status,res);
-        }
-    } 
-    else{
-        
-    }
-}
-*/
+const version = boxen(chalk.redBright.bold("Urltester 1.0.0"), boxenOptions);
+
 if(process.argv.length == 2 ) messageOne();
 else if(process.argv[2] === "version" || process.argv[2] === "-v") {
     console.log(version);
@@ -61,25 +37,43 @@ else {
     if(err) console.log(("Unsuccesful to read file"), err)
     else {
         const urlArr = data.match(/(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/gi);
+        if(process.argv[3] === '--all'){
+            displayAll = true;
+            displayGood = true;
+            displayBad = true;
+        }
+        if(process.argv[3] === '--good' ) {
+            displayGood = true;
+            displayAll = false;
+        }
+        else if(process.argv[3] === '--bad' ) {
+            displayBad = true;
+            displayGood = false;
+        }
         urlArr.forEach((url) => {
             fetch(url,{method: "HEAD", timeout: 1500})
             .then((response) => {
-                if(response.status == 200) {
-                    console.log(chalk.green(response.status, url));
+                
+                if(response.status == 200 ) {
+                    if(displayGood)
+                        console.log(chalk.green(response.status, url));
                 }
                 else if(response.status == 400 || response.status == 404) {
-                    console.log(chalk.red(response.status, url));
+                    if(displayBad)
+                        console.log(chalk.red(response.status, url));
                 } 
                 else {
+                    if(displayAll)
                     console.log(chalk.gray(response.status, url));
                 } 
             })
             .catch((error) => {
+                if(displayBad){
                 console.log(chalk.red("404", url)); 
+                }
             });
         });
     }
 });
-//
 }
 
