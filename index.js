@@ -29,14 +29,15 @@ const version = boxen(chalk.redBright.bold("Urltester 1.0.0"), boxenOptions);
 
 const coloredOutput = (urlArray) => {
     for(var item of urlArray) {      
-        if(item.status == '200') {
+        if(item.status == '200' && displayGood) {
             console.log(chalk.green.bold(` ${item.status}: ${item.url} `));
         }
-        else if((item.status == '400' || item.status == '404') ){
+        else if((item.status == '400' || item.status == '404') && displayBad){
             console.log(chalk.red.bold(` ${item.status}: ${item.url} `));
         }
-        else 
-            console.log(chalk.grey.bold(` ${item.status}: ${item.url} `));           
+        else if(displayAll){
+            console.log(chalk.grey.bold(` ${item.status}: ${item.url} `)); 
+        }          
     }
 }
 
@@ -71,20 +72,28 @@ else {
                     if(process.argv[3] === '-j' || process.argv[3] === '--json' || process.argv[3] === '\j' ){
                         console.log(JSON.stringify(results));
                     }
-                    else if(process.argv[3] === '--all'){
+                    else if(process.argv[3] === '--all' ){
                             displayAll = true;
                             displayGood = true;
                             displayBad = true;
+                            coloredOutput(results);
                     }
                     else if(process.argv[3] === '--good' ) {
                             displayGood = true;
                             displayAll = false;
+                            coloredOutput(results);
                     }
                     else if(process.argv[3] === '--bad' ) {
                             displayBad = true;
-                            displayGood = false;
+                            displayAll = false;
+                            coloredOutput(results);
                     }
-                    else coloredOutput(results);
+                    else {
+                        displayAll = true;
+                        displayGood = true;
+                        displayBad = true;
+                        coloredOutput(results);
+                    }
                 })
                 .catch(err => 
                     console.log("Error message: ", err) );
