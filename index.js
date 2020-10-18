@@ -8,6 +8,7 @@ const path = require("path");
 var displayAll = true;
 var displayGood = false;
 var displayBad = false;
+var ignoreURLs = [];
 
 const boxenOptions = {
     padding: 1,
@@ -16,6 +17,7 @@ const boxenOptions = {
     borderColor: "blue",
     backgroundColor: "#FFFFFF"
 }
+
 
 const messageOne = () => {
     console.log(chalk.red("\n                Standard user manual                "));
@@ -41,6 +43,39 @@ const coloredOutput = (urlArray) => {
     }
 }
 
+const ignoreFilter = (results, ignoreFileName) =>{
+    resultsFinal = []
+    fs.readFile(ignoreFileName, 'utf8', (err, data) => {
+        if(err) {
+            console.log(err);
+        }
+        else {
+            invalid = data
+            .match(/[\n][^(#|http|https)].+$/gm);
+            if(invalid == null)
+            {
+                urlsIgnore = data.match(/(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/gi); 
+                results.forEach((result) =>{
+                    if(!urlsIgnore.includes(result.url))
+                    {
+                        resultsFinal.push(result);
+                    }
+                })
+                displayAll = true;
+                displayGood = true;
+                displayBad = true;
+                coloredOutput(resultsFinal);
+            }
+            else 
+            {
+                process.exit(1);             
+            } 
+        }
+    } );
+    
+   
+}
+
 const checkUrl = async (url) => {
     var jsonOutput = [];
     var urlElement;
@@ -50,7 +85,7 @@ const checkUrl = async (url) => {
         jsonOutput.push(urlElement);
     } catch(error) {
         urlElement = { url: `${url}`, status: '404' }
-        jsonOutput.push(urlElement)
+        jsonOutput.push(urlElement);
     }
     return urlElement
 }
@@ -59,12 +94,12 @@ if(process.argv.length == 2 ) messageOne();
 else if(process.argv[2] === "version" || process.argv[2] === "-v") {
     console.log(version);
 }    
-else {      
+else { 
     const filePath = path.join(__dirname,process.argv[2]);
     fs.readFile(filePath,'utf-8', function(err, data) {
-        if(err) console.log(chalk.red("Unsuccesful to read file"), err)    
+        if(err) console.log(chalk.red("Unsuccessful to read file"), err)    
         else {
-            const urlArr = data.match(/(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/gi);         
+            const urlArr = data.match(/(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/gi);       
             const promises = urlArr.map(checkUrl);
             Promise
                 .all(promises)
@@ -88,6 +123,15 @@ else {
                             displayAll = false;
                             coloredOutput(results);
                     }
+                    else if (process.argv[3] === '-i' || process.argv[3] === '--ignore'){
+                            let ignoreFileName = process.argv[4];
+                            if(ignoreFileName){
+                                ignoreFilter(results, ignoreFileName);
+                            }
+                            else {
+                                console.log(chalk.red.bold(`Please provide this pattern: urltester <filename> -i/--ignore <filename> `));
+                            }
+                    }
                     else {
                         displayAll = true;
                         displayGood = true;
@@ -96,8 +140,8 @@ else {
                     }
                 })
                 .catch(err => 
-                    console.log("Error message: ", err) );
+                    console.log("Error message: ", err));
         }
     });
 }
-
+    

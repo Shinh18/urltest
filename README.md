@@ -19,6 +19,8 @@ Command-line tool for finding and reporting dead links (e.g., broken URLs) in a 
     * --bad will display all bad URLs i.e. status code 400 or 404
 * ```urltester```
     * This command displays a standard usage manual which shows how to use the tool as well as the command line arguments available
+* ```urltester -i | --ignore```
+    * Using either one of these commands will parse an ignored URLs text file. All URLs should be checked against this list to see if they need to be ignored.
 
 ## Features
 * It looks for and processes all the URLs using ```http://``` or ```https://``` schemes 
