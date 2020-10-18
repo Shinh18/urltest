@@ -30,6 +30,7 @@ Command-line tool for finding and reporting dead links (e.g., broken URLs) in a 
    * Gray: unknown, status code
 * Optimized to request headers instead of full body downloads
 * Additional support is added for timeouts
+* Ignore URL pattern feature is added to ignore specified URL patterns.
 
 
 
