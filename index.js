@@ -32,7 +32,7 @@ const printColoredOutput = (urlArray) => {
     }
 }
 
-const ignoreFilter = (results, ignoreFileName) => {
+const ignoreUrlFilter = (results, ignoreFileName) => {
     resultsFinal = []
     fs.readFile(ignoreFileName, 'utf8', (err, data) => {
         if(err) 
@@ -107,7 +107,7 @@ else {
                     else if(process.argv[3] === '-i' || process.argv[3] === '--ignore') {
                             let ignoreFileName = process.argv[4];
                             if(ignoreFileName) 
-                                ignoreFilter(results, ignoreFileName);
+                                ignoreUrlFilter(results, ignoreFileName);
                             else 
                                 console.log(chalk.red.bold(`Please provide this pattern: urltester <filename> -i/--ignore <filename> `));
                     }
