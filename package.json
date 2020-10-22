@@ -4,7 +4,7 @@
   "description": "Command-line tool for finding and reporting dead links (e.g., broken URLs) in a file",
   "main": "index.js",
   "bin": {
-    "urltester": "./index.js"
+    "urltester": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,5 +28,6 @@
     "fs": "0.0.1-security",
     "node-fetch": "^2.6.1",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {}
 }

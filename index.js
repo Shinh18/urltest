@@ -8,7 +8,6 @@ const path = require("path");
 var displayAll = true;
 var displayGood = false;
 var displayBad = false;
-var ignoreURLs = [];
 
 const boxenOptions = {
     padding: 1,
