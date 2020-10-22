@@ -4,14 +4,14 @@ const chalk = require("chalk");
 const boxen = require("boxen");
 const fetch = require("node-fetch");
 const fs = require("fs");
+const boxenOptions = require("./style")
 const path = require("path");
+
 var displayAll = true;
 var displayGood = false;
 var displayBad = false;
-const boxenOptions = require("./style")
 
-
-const messageOne = () => {
+const printManual = () => {
     console.log(chalk.red("\n                Standard user manual                "));
     console.log((chalk.gray("----------------------------------------------------"))); 
     console.log(chalk.redBright("urltester filename   -"), "reports good,bad,unknown urls"); 
@@ -82,7 +82,7 @@ const checkUrl = async (url) => {
     return urlElement
 }
 
-if(process.argv.length == 2 ) messageOne();
+if(process.argv.length == 2 ) printManual();
 else if(process.argv[2] === "version" || process.argv[2] === "-v") {
     console.log(version);
 }    
