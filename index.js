@@ -74,7 +74,6 @@ if(process.argv.length == 2 )
     printManual();
 else if(process.argv[2] === "version" || process.argv[2] === "-v") 
     console.log(version);
-  
 else { 
     const filePath = path.join(__dirname,process.argv[2]);
     fs.readFile(filePath,'utf-8', function(err, data) {
