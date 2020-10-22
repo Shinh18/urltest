@@ -21,7 +21,7 @@ const printManual = () => {
 
 const version = boxen(chalk.redBright.bold("Urltester 1.0.0"), boxenOptions);
 
-const coloredOutput = (urlArray) => {
+const printColoredOutput = (urlArray) => {
     for(var item of urlArray) {      
         if(item.status == '200' && displayGood) {
             console.log(chalk.green.bold(` ${item.status}: ${item.url} `));
@@ -56,7 +56,7 @@ const ignoreFilter = (results, ignoreFileName) =>{
                 displayAll = true;
                 displayGood = true;
                 displayBad = true;
-                coloredOutput(resultsFinal);
+                printColoredOutput(resultsFinal);
             }
             else 
             {
