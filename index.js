@@ -8,14 +8,7 @@ const path = require("path");
 var displayAll = true;
 var displayGood = false;
 var displayBad = false;
-
-const boxenOptions = {
-    padding: 1,
-    margin: 1,
-    borderStyle: "round",
-    borderColor: "blue",
-    backgroundColor: "#FFFFFF"
-}
+const boxenOptions = require("./style")
 
 
 const messageOne = () => {
