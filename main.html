@@ -1,78 +1,365 @@
-
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
-<head>
-<meta charset="UTF-8"/>
-<title>Planet CDOT Feed List - CDOT Wiki</title>
-<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
-<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Planet_CDOT_Feed_List","wgTitle":"Planet CDOT Feed List","wgCurRevisionId":148304,"wgRevisionId":148304,"wgArticleId":2447,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Planet_CDOT_Feed_List","wgRelevantArticleId":2447,"wgRequestId":"X2zl8a41lzedm0zjN-WNgAAAAAs","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgPreferredVariant":"en","wgMFExpandAllSectionsUserOption":false,"wgMFDisplayWikibaseDescriptions":{"search":false,"nearby":false,"watchlist":false,"tagline":false}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@1criv6w",function ( $, jQuery, require, module ) {
-mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+  <head>
+    <meta charset="UTF-8" />
+    <title>Planet CDOT Feed List - CDOT Wiki</title>
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(
+        /(^|\s)client-nojs(\s|$)/,
+        '$1client-js$2'
+      );
+    </script>
+    <script>
+      (window.RLQ = window.RLQ || []).push(function () {
+        mw.config.set({
+          wgCanonicalNamespace: '',
+          wgCanonicalSpecialPageName: false,
+          wgNamespaceNumber: 0,
+          wgPageName: 'Planet_CDOT_Feed_List',
+          wgTitle: 'Planet CDOT Feed List',
+          wgCurRevisionId: 148304,
+          wgRevisionId: 148304,
+          wgArticleId: 2447,
+          wgIsArticle: true,
+          wgIsRedirect: false,
+          wgAction: 'view',
+          wgUserName: null,
+          wgUserGroups: ['*'],
+          wgCategories: [],
+          wgBreakFrames: false,
+          wgPageContentLanguage: 'en',
+          wgPageContentModel: 'wikitext',
+          wgSeparatorTransformTable: ['', ''],
+          wgDigitTransformTable: ['', ''],
+          wgDefaultDateFormat: 'dmy',
+          wgMonthNames: [
+            '',
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December',
+          ],
+          wgMonthNamesShort: [
+            '',
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
+          ],
+          wgRelevantPageName: 'Planet_CDOT_Feed_List',
+          wgRelevantArticleId: 2447,
+          wgRequestId: 'X2zl8a41lzedm0zjN-WNgAAAAAs',
+          wgIsProbablyEditable: false,
+          wgRelevantPageIsProbablyEditable: false,
+          wgRestrictionEdit: [],
+          wgRestrictionMove: [],
+          wgPreferredVariant: 'en',
+          wgMFExpandAllSectionsUserOption: false,
+          wgMFDisplayWikibaseDescriptions: {
+            search: false,
+            nearby: false,
+            watchlist: false,
+            tagline: false,
+          },
+        });
+        mw.loader.state({
+          'site.styles': 'ready',
+          noscript: 'ready',
+          'user.styles': 'ready',
+          user: 'ready',
+          'user.options': 'loading',
+          'user.tokens': 'loading',
+          'mediawiki.legacy.shared': 'ready',
+          'mediawiki.legacy.commonPrint': 'ready',
+          'mediawiki.sectionAnchor': 'ready',
+          'mediawiki.skinning.interface': 'ready',
+          'skins.vector.styles': 'ready',
+        });
+        mw.loader.implement('user.options@0bhc5ha', function ($, jQuery, require, module) {
+          mw.user.options.set([]);
+        });
+        mw.loader.implement('user.tokens@1criv6w', function ($, jQuery, require, module) {
+          mw.user.tokens.set({
+            editToken: '+\\',
+            patrolToken: '+\\',
+            watchToken: '+\\',
+            csrfToken: '+\\',
+          }); /*@nomin*/
+        });
+        mw.loader.load([
+          'site',
+          'mediawiki.page.startup',
+          'mediawiki.user',
+          'mediawiki.hidpi',
+          'mediawiki.page.ready',
+          'mediawiki.toc',
+          'mediawiki.searchSuggest',
+          'skins.vector.js',
+        ]);
+      });
+    </script>
+    <link
+      rel="stylesheet"
+      href="/w/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector"
+    />
+    <script
+      async=""
+      src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"
+    ></script>
+    <meta name="ResourceLoaderDynamicStyles" content="" />
+    <link
+      rel="stylesheet"
+      href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"
+    />
+    <meta name="generator" content="MediaWiki 1.30.0" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      href="/w/opensearch_desc.php"
+      title="CDOT Wiki (en)"
+    />
+    <link
+      rel="EditURI"
+      type="application/rsd+xml"
+      href="https://wiki.cdot.senecacollege.ca/w/api.php?action=rsd"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="CDOT Wiki Atom feed"
+      href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"
+    />
+    <!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body
+    class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Planet_CDOT_Feed_List rootpage-Planet_CDOT_Feed_List skin-vector action-view"
+  >
+    <div id="mw-page-base" class="noprint"></div>
+    <div id="mw-head-base" class="noprint"></div>
+    <div id="content" class="mw-body" role="main">
+      <a id="top"></a>
 
-});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
-<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector"/>
-<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
-<meta name="ResourceLoaderDynamicStyles" content=""/>
-<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
-<meta name="generator" content="MediaWiki 1.30.0"/>
-<link rel="shortcut icon" href="/favicon.ico"/>
-<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="CDOT Wiki (en)"/>
-<link rel="EditURI" type="application/rsd+xml" href="https://wiki.cdot.senecacollege.ca/w/api.php?action=rsd"/>
-<link rel="alternate" type="application/atom+xml" title="CDOT Wiki Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
-<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js"></script><![endif]-->
-</head>
-<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Planet_CDOT_Feed_List rootpage-Planet_CDOT_Feed_List skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
-		<div id="mw-head-base" class="noprint"></div>
-		<div id="content" class="mw-body" role="main">
-			<a id="top"></a>
+      <div class="mw-indicators mw-body-content"></div>
+      <h1 id="firstHeading" class="firstHeading" lang="en">Planet CDOT Feed List</h1>
+      <div id="bodyContent" class="mw-body-content">
+        <div id="siteSub" class="noprint">From CDOT Wiki</div>
+        <div id="contentSub"></div>
+        <div id="jump-to-nav" class="mw-jump">
+          Jump to: <a href="#mw-head">navigation</a>, <a href="#p-search">search</a>
+        </div>
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+          <div class="mw-parser-output">
+            <div id="toc" class="toc">
+              <div class="toctitle"><h2>Contents</h2></div>
+              <ul>
+                <li class="toclevel-1 tocsection-1">
+                  <a href="#Introduction"
+                    ><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a
+                  >
+                </li>
+                <li class="toclevel-1 tocsection-2">
+                  <a href="#IMPORTANT_NOTICE"
+                    ><span class="tocnumber">2</span>
+                    <span class="toctext">IMPORTANT NOTICE</span></a
+                  >
+                </li>
+                <li class="toclevel-1 tocsection-3">
+                  <a href="#Requirements"
+                    ><span class="tocnumber">3</span> <span class="toctext">Requirements</span></a
+                  >
+                </li>
+                <li class="toclevel-1 tocsection-4">
+                  <a href="#Using_a_Tagged.2FCategory_Feed"
+                    ><span class="tocnumber">4</span>
+                    <span class="toctext">Using a Tagged/Category Feed</span></a
+                  >
+                </li>
+                <li class="toclevel-1 tocsection-5">
+                  <a href="#Feed_Info_Format"
+                    ><span class="tocnumber">5</span>
+                    <span class="toctext">Feed Info Format</span></a
+                  >
+                </li>
+                <li class="toclevel-1 tocsection-6">
+                  <a href="#Feeds"
+                    ><span class="tocnumber">6</span> <span class="toctext">Feeds</span></a
+                  >
+                </li>
+              </ul>
+            </div>
 
-						<div class="mw-indicators mw-body-content">
-</div>
-			<h1 id="firstHeading" class="firstHeading" lang="en">Planet CDOT Feed List</h1>
-									<div id="bodyContent" class="mw-body-content">
-									<div id="siteSub" class="noprint">From CDOT Wiki</div>
-								<div id="contentSub"></div>
-												<div id="jump-to-nav" class="mw-jump">
-					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
-				</div>
-				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#IMPORTANT_NOTICE"><span class="tocnumber">2</span> <span class="toctext">IMPORTANT NOTICE</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Requirements"><span class="tocnumber">3</span> <span class="toctext">Requirements</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Using_a_Tagged.2FCategory_Feed"><span class="tocnumber">4</span> <span class="toctext">Using a Tagged/Category Feed</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Feed_Info_Format"><span class="tocnumber">5</span> <span class="toctext">Feed Info Format</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Feeds"><span class="tocnumber">6</span> <span class="toctext">Feeds</span></a></li>
-</ul>
-</div>
-
-<h1><span class="mw-headline" id="Introduction">Introduction</span></h1>
-<p>Seneca students and faculty working on open source related projects and research, as well as some faculty, students, and researchers from other institutions, use <a rel="nofollow" class="external text" href="http://zenit.senecac.on.ca/~chris.tyler/planet/">Planet CDOT</a> to aggregate their blogs.  This page contains the information about who is blogging in <a rel="nofollow" class="external text" href="http://www.planetplanet.org/">Planet Feed Reader format</a> and serves as the feed configuration for the planet.
-</p><p>If you do not have an existing blog, you can open a free account at <a rel="nofollow" class="external text" href="http://wordpress.com/">Wordpress.com</a> or <a rel="nofollow" class="external text" href="https://www.blogger.com/">Blogger.com</a> or you can set up your own blog software such as <a rel="nofollow" class="external text" href="http://www.s9y.org">Serendipity</a>.
-</p><p><b>Note:</b> Additions to the feed list will not take effect until they are merged into the Planet configuration, which is an automatic process scheduled at regular intervals. If you add a feed and do not see it picked up in the Planet within three hours, please check your feed entry carefully and then contact <a href="/wiki/User:Chris_Tyler" title="User:Chris Tyler">Chris Tyler</a> .
-</p>
-<h1><span class="mw-headline" id="IMPORTANT_NOTICE">IMPORTANT NOTICE</span></h1>
-<div class="messagebox" style="background-color: #f9f6b7; border: 1px solid #c4c295; color: black; padding: 5px; margin: 1ex 0; min-height: 35px; padding-left: 45px;">
-<div style="float: left; margin-left: -40px;"><a href="/wiki/File:Stop_(medium_size).png" class="image"><img alt="Stop (medium size).png" src="/w/imgs/thumb/Stop_%28medium_size%29.png/35px-Stop_%28medium_size%29.png" width="35" height="35" srcset="/w/imgs/Stop_%28medium_size%29.png 1.5x" /></a></div>
-<div><b>The Internet has a Long Memory / Posts may be Permanent!</b><br />Blogs which are included in the Planet CDOT Feed List will have their content aggregated into Planet CDOT. They will also be mentioned (automatically) on the Planet CDOT Twitter account, and may also be picked up by other RSS feed aggregators, seach engines, and caches. It will be difficult or impossible to delete all mentions of a post at a later date. Be aware of the long memory of the Internet when posting!</div>
-</div>
-<h1><span class="mw-headline" id="Requirements">Requirements</span></h1>
-<ul><li> Blog postings fed to the planet must conform to the <a href="/wiki/Blog_Guidelines" title="Blog Guidelines">Blog Guidelines</a>.</li>
-<li> Feeds that are inactive for a significant period of time may get deleted from this list.</li></ul>
-<h1><span class="mw-headline" id="Using_a_Tagged.2FCategory_Feed">Using a Tagged/Category Feed</span></h1>
-<p>A tagged or category feed includes only articles that are tagged with particular keywords or placed in a particular topic category. This can be useful for sending only selected posts to the planet.
-</p><p>These are the URL formats for tagged or category feeds on popular blogging services/software:
-</p>
-<ul><li> <a rel="nofollow" class="external text" href="http://www.wordpress.com">Wordpress</a>: <code>[http://<i>blog-user-name</i>.wordpress.com/category/<i>category-name</i>/feed/]</code></li>
-<li> <a rel="nofollow" class="external text" href="http://blogger.com">Blogger</a>: <code>[http://<i>blog-user-name</i>.blogspot.com/feeds/posts/default/-/<i>categorylabel</i>?alt=rss]</code></li>
-<li> <a rel="nofollow" class="external text" href="http://s9y.org">Serendipity</a>: <code>[http://<i>blog-main-url</i>/index.php?/feeds/categories/<i>categorynumber</i>-<i>categoryname</i>]</code></li></ul>
-<h1><span class="mw-headline" id="Feed_Info_Format">Feed Info Format</span></h1>
-<p>You can add your blog's <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/RSS_(file_format)">RSS feed</a> at the end of the list below by specifying the following:
-</p>
-<ol><li> The URL to your blog's open source Atom or <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/RSS_(file_format)">RSS Feed</a> (i.e., a category or tag).  NOTE: Please do not put the URL to your blog -- use the URL for your feed. Please do not use the feed for your entire blog (unless your blog contains only open source-related postings).  We only want open source related content.</li>
-<li> Your name as you want it to appear in the list of names for the planet</li>
-<li> Optionally, a URL to a <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Hackergotchi">hackergotchi</a> (<a rel="nofollow" class="external text" href="http://wouterverhelst.livejournal.com/21322.html">how to</a>).  Your picture should be an 65x85 PNG with a transparent background.</li></ol>
-<h1><span class="mw-headline" id="Feeds">Feeds</span></h1>
-<pre>
+            <h1><span class="mw-headline" id="Introduction">Introduction</span></h1>
+            <p>
+              Seneca students and faculty working on open source related projects and research, as
+              well as some faculty, students, and researchers from other institutions, use
+              <a
+                rel="nofollow"
+                class="external text"
+                href="http://zenit.senecac.on.ca/~chris.tyler/planet/"
+                >Planet CDOT</a
+              >
+              to aggregate their blogs. This page contains the information about who is blogging in
+              <a rel="nofollow" class="external text" href="http://www.planetplanet.org/"
+                >Planet Feed Reader format</a
+              >
+              and serves as the feed configuration for the planet.
+            </p>
+            <p>
+              If you do not have an existing blog, you can open a free account at
+              <a rel="nofollow" class="external text" href="http://wordpress.com/">Wordpress.com</a>
+              or
+              <a rel="nofollow" class="external text" href="https://www.blogger.com/"
+                >Blogger.com</a
+              >
+              or you can set up your own blog software such as
+              <a rel="nofollow" class="external text" href="http://www.s9y.org">Serendipity</a>.
+            </p>
+            <p>
+              <b>Note:</b> Additions to the feed list will not take effect until they are merged
+              into the Planet configuration, which is an automatic process scheduled at regular
+              intervals. If you add a feed and do not see it picked up in the Planet within three
+              hours, please check your feed entry carefully and then contact
+              <a href="/wiki/User:Chris_Tyler" title="User:Chris Tyler">Chris Tyler</a> .
+            </p>
+            <h1><span class="mw-headline" id="IMPORTANT_NOTICE">IMPORTANT NOTICE</span></h1>
+            <div
+              class="messagebox"
+              style="
+                background-color: #f9f6b7;
+                border: 1px solid #c4c295;
+                color: black;
+                padding: 5px;
+                margin: 1ex 0;
+                min-height: 35px;
+                padding-left: 45px;
+              "
+            >
+              <div style="float: left; margin-left: -40px">
+                <a href="/wiki/File:Stop_(medium_size).png" class="image"
+                  ><img
+                    alt="Stop (medium size).png"
+                    src="/w/imgs/thumb/Stop_%28medium_size%29.png/35px-Stop_%28medium_size%29.png"
+                    width="35"
+                    height="35"
+                    srcset="/w/imgs/Stop_%28medium_size%29.png 1.5x"
+                /></a>
+              </div>
+              <div>
+                <b>The Internet has a Long Memory / Posts may be Permanent!</b><br />Blogs which are
+                included in the Planet CDOT Feed List will have their content aggregated into Planet
+                CDOT. They will also be mentioned (automatically) on the Planet CDOT Twitter
+                account, and may also be picked up by other RSS feed aggregators, seach engines, and
+                caches. It will be difficult or impossible to delete all mentions of a post at a
+                later date. Be aware of the long memory of the Internet when posting!
+              </div>
+            </div>
+            <h1><span class="mw-headline" id="Requirements">Requirements</span></h1>
+            <ul>
+              <li>
+                Blog postings fed to the planet must conform to the
+                <a href="/wiki/Blog_Guidelines" title="Blog Guidelines">Blog Guidelines</a>.
+              </li>
+              <li>
+                Feeds that are inactive for a significant period of time may get deleted from this
+                list.
+              </li>
+            </ul>
+            <h1>
+              <span class="mw-headline" id="Using_a_Tagged.2FCategory_Feed"
+                >Using a Tagged/Category Feed</span
+              >
+            </h1>
+            <p>
+              A tagged or category feed includes only articles that are tagged with particular
+              keywords or placed in a particular topic category. This can be useful for sending only
+              selected posts to the planet.
+            </p>
+            <p>
+              These are the URL formats for tagged or category feeds on popular blogging
+              services/software:
+            </p>
+            <ul>
+              <li>
+                <a rel="nofollow" class="external text" href="http://www.wordpress.com">Wordpress</a
+                >:
+                <code
+                  >[http://<i>blog-user-name</i>.wordpress.com/category/<i>category-name</i>/feed/]</code
+                >
+              </li>
+              <li>
+                <a rel="nofollow" class="external text" href="http://blogger.com">Blogger</a>:
+                <code
+                  >[http://<i>blog-user-name</i>.blogspot.com/feeds/posts/default/-/<i>categorylabel</i>?alt=rss]</code
+                >
+              </li>
+              <li>
+                <a rel="nofollow" class="external text" href="http://s9y.org">Serendipity</a>:
+                <code
+                  >[http://<i>blog-main-url</i>/index.php?/feeds/categories/<i>categorynumber</i>-<i>categoryname</i>]</code
+                >
+              </li>
+            </ul>
+            <h1><span class="mw-headline" id="Feed_Info_Format">Feed Info Format</span></h1>
+            <p>
+              You can add your blog's
+              <a
+                rel="nofollow"
+                class="external text"
+                href="http://en.wikipedia.org/wiki/RSS_(file_format)"
+                >RSS feed</a
+              >
+              at the end of the list below by specifying the following:
+            </p>
+            <ol>
+              <li>
+                The URL to your blog's open source Atom or
+                <a
+                  rel="nofollow"
+                  class="external text"
+                  href="http://en.wikipedia.org/wiki/RSS_(file_format)"
+                  >RSS Feed</a
+                >
+                (i.e., a category or tag). NOTE: Please do not put the URL to your blog -- use the
+                URL for your feed. Please do not use the feed for your entire blog (unless your blog
+                contains only open source-related postings). We only want open source related
+                content.
+              </li>
+              <li>Your name as you want it to appear in the list of names for the planet</li>
+              <li>
+                Optionally, a URL to a
+                <a
+                  rel="nofollow"
+                  class="external text"
+                  href="http://en.wikipedia.org/wiki/Hackergotchi"
+                  >hackergotchi</a
+                >
+                (<a
+                  rel="nofollow"
+                  class="external text"
+                  href="http://wouterverhelst.livejournal.com/21322.html"
+                  >how to</a
+                >). Your picture should be an 65x85 PNG with a transparent background.
+              </li>
+            </ol>
+            <h1><span class="mw-headline" id="Feeds">Feeds</span></h1>
+            <pre>
 ################# Failing Feeds Commented Out [Start] #################
 
 #Feed excluded due to getaddrinfo ENOTFOUND s-aleinikov.blog.ca s-aleinikov.blog.ca:80
@@ -3233,9 +3520,10 @@ name=Minh Huy Nguyen
 [https://hyunjijanelee.blogspot.com/feeds/posts/default/-/Open-Source?alt=rss]
 name=Hyunji Lee
 
-</pre>
+</pre
+            >
 
-<!-- 
+            <!-- 
 NewPP limit report
 Cached time: 20200924141504
 Cache expiry: 86400
@@ -3249,145 +3537,427 @@ Template argument size: 970/2097152 bytes
 Highest expansion depth: 4/40
 Expensive parser function count: 0/100
 -->
-<!--
+            <!--
 Transclusion expansion time report (%,ms,calls,template)
 100.00%    7.272      1 -total
 100.00%    7.272      1 Template:Admon/caution
  55.25%    4.018      1 Template:Message
 -->
-</div>
-<!-- Saved in parser cache with key cdotwiki_db-mw_:pcache:idhash:2447-0!canonical and timestamp 20200924141503 and revision id 148304
+          </div>
+          <!-- Saved in parser cache with key cdotwiki_db-mw_:pcache:idhash:2447-0!canonical and timestamp 20200924141503 and revision id 148304
  -->
-</div>					<div class="printfooter">
-						Retrieved from "<a dir="ltr" href="https://wiki.cdot.senecacollege.ca/w/index.php?title=Planet_CDOT_Feed_List&amp;oldid=148304">https://wiki.cdot.senecacollege.ca/w/index.php?title=Planet_CDOT_Feed_List&amp;oldid=148304</a>"					</div>
-				<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>				<div class="visualClear"></div>
-							</div>
-		</div>
-		<div id="mw-navigation">
-			<h2>Navigation menu</h2>
+        </div>
+        <div class="printfooter">
+          Retrieved from "<a
+            dir="ltr"
+            href="https://wiki.cdot.senecacollege.ca/w/index.php?title=Planet_CDOT_Feed_List&amp;oldid=148304"
+            >https://wiki.cdot.senecacollege.ca/w/index.php?title=Planet_CDOT_Feed_List&amp;oldid=148304</a
+          >"
+        </div>
+        <div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+        <div class="visualClear"></div>
+      </div>
+    </div>
+    <div id="mw-navigation">
+      <h2>Navigation menu</h2>
 
-			<div id="mw-head">
-									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
-						<h3 id="p-personal-label">Personal tools</h3>
-						<ul>
-							<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Planet+CDOT+Feed+List" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li><li id="pt-createaccount"><a href="/wiki/Special:RequestAccount" title="You are encouraged to create an account and log in; however, it is not mandatory">Request account</a></li>						</ul>
-					</div>
-									<div id="left-navigation">
-										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
-						<h3 id="p-namespaces-label">Namespaces</h3>
-						<ul>
-														<li id="ca-nstab-main" class="selected"><span><a href="/wiki/Planet_CDOT_Feed_List" title="View the content page [c]" accesskey="c">Page</a></span></li>
-							<li id="ca-talk" class="new"><span><a href="/w/index.php?title=Talk:Planet_CDOT_Feed_List&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
-						</ul>
-					</div>
-										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
-												<h3 id="p-variants-label">
-							<span>Variants</span>
-						</h3>
+      <div id="mw-head">
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+          <h3 id="p-personal-label">Personal tools</h3>
+          <ul>
+            <li id="pt-login">
+              <a
+                href="/w/index.php?title=Special:UserLogin&amp;returnto=Planet+CDOT+Feed+List"
+                title="You are encouraged to log in; however, it is not mandatory [o]"
+                accesskey="o"
+                >Log in</a
+              >
+            </li>
+            <li id="pt-createaccount">
+              <a
+                href="/wiki/Special:RequestAccount"
+                title="You are encouraged to create an account and log in; however, it is not mandatory"
+                >Request account</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="left-navigation">
+          <div
+            id="p-namespaces"
+            role="navigation"
+            class="vectorTabs"
+            aria-labelledby="p-namespaces-label"
+          >
+            <h3 id="p-namespaces-label">Namespaces</h3>
+            <ul>
+              <li id="ca-nstab-main" class="selected">
+                <span
+                  ><a
+                    href="/wiki/Planet_CDOT_Feed_List"
+                    title="View the content page [c]"
+                    accesskey="c"
+                    >Page</a
+                  ></span
+                >
+              </li>
+              <li id="ca-talk" class="new">
+                <span
+                  ><a
+                    href="/w/index.php?title=Talk:Planet_CDOT_Feed_List&amp;action=edit&amp;redlink=1"
+                    rel="discussion"
+                    title="Discussion about the content page [t]"
+                    accesskey="t"
+                    >Discussion</a
+                  ></span
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            id="p-variants"
+            role="navigation"
+            class="vectorMenu emptyPortlet"
+            aria-labelledby="p-variants-label"
+          >
+            <h3 id="p-variants-label">
+              <span>Variants</span>
+            </h3>
 
-						<div class="menu">
-							<ul>
-															</ul>
-						</div>
-					</div>
-									</div>
-				<div id="right-navigation">
-										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
-						<h3 id="p-views-label">Views</h3>
-						<ul>
-														<li id="ca-view" class="selected"><span><a href="/wiki/Planet_CDOT_Feed_List">Read</a></span></li>
-							<li id="ca-viewsource"><span><a href="/w/index.php?title=Planet_CDOT_Feed_List&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
-							<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Planet_CDOT_Feed_List&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
-						</ul>
-					</div>
-										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
-						<h3 id="p-cactions-label"><span>More</span></h3>
+            <div class="menu">
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+        <div id="right-navigation">
+          <div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+            <h3 id="p-views-label">Views</h3>
+            <ul>
+              <li id="ca-view" class="selected">
+                <span><a href="/wiki/Planet_CDOT_Feed_List">Read</a></span>
+              </li>
+              <li id="ca-viewsource">
+                <span
+                  ><a
+                    href="/w/index.php?title=Planet_CDOT_Feed_List&amp;action=edit"
+                    title="This page is protected.&#10;You can view its source [e]"
+                    accesskey="e"
+                    >View source</a
+                  ></span
+                >
+              </li>
+              <li id="ca-history" class="collapsible">
+                <span
+                  ><a
+                    href="/w/index.php?title=Planet_CDOT_Feed_List&amp;action=history"
+                    title="Past revisions of this page [h]"
+                    accesskey="h"
+                    >View history</a
+                  ></span
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            id="p-cactions"
+            role="navigation"
+            class="vectorMenu emptyPortlet"
+            aria-labelledby="p-cactions-label"
+          >
+            <h3 id="p-cactions-label"><span>More</span></h3>
 
-						<div class="menu">
-							<ul>
-															</ul>
-						</div>
-					</div>
-										<div id="p-search" role="search">
-						<h3>
-							<label for="searchInput">Search</label>
-						</h3>
+            <div class="menu">
+              <ul></ul>
+            </div>
+          </div>
+          <div id="p-search" role="search">
+            <h3>
+              <label for="searchInput">Search</label>
+            </h3>
 
-						<form action="/w/index.php" id="searchform">
-							<div id="simpleSearch">
-							<input type="search" name="search" placeholder="Search CDOT Wiki" title="Search CDOT Wiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
-						</form>
-					</div>
-									</div>
-			</div>
-			<div id="mw-panel">
-				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
-						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
-			<h3 id='p-navigation-label'>Navigation</h3>
+            <form action="/w/index.php" id="searchform">
+              <div id="simpleSearch">
+                <input
+                  type="search"
+                  name="search"
+                  placeholder="Search CDOT Wiki"
+                  title="Search CDOT Wiki [f]"
+                  accesskey="f"
+                  id="searchInput"
+                /><input type="hidden" value="Special:Search" name="title" /><input
+                  type="submit"
+                  name="fulltext"
+                  value="Search"
+                  title="Search the pages for this text"
+                  id="mw-searchButton"
+                  class="searchButton mw-fallbackSearchButton"
+                /><input
+                  type="submit"
+                  name="go"
+                  value="Go"
+                  title="Go to a page with this exact name if it exists"
+                  id="searchButton"
+                  class="searchButton"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="mw-panel">
+        <div id="p-logo" role="banner">
+          <a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page"></a>
+        </div>
+        <div
+          class="portal"
+          role="navigation"
+          id="p-navigation"
+          aria-labelledby="p-navigation-label"
+        >
+          <h3 id="p-navigation-label">Navigation</h3>
 
-			<div class="body">
-									<ul>
-						<li id="n-CDOT"><a href="/wiki/CDOT">CDOT</a></li><li id="n-SICT-AR-Meeting-Area"><a href="/wiki/SICT_AR_Meeting_Area">SICT AR Meeting Area</a></li><li id="n-People"><a href="/wiki/People">People</a></li>					</ul>
-							</div>
-		</div>
-			<div class="portal" role="navigation" id='p-get_involved_with_CDOT' aria-labelledby='p-get_involved_with_CDOT-label'>
-			<h3 id='p-get_involved_with_CDOT-label'>get involved with CDOT</h3>
+          <div class="body">
+            <ul>
+              <li id="n-CDOT"><a href="/wiki/CDOT">CDOT</a></li>
+              <li id="n-SICT-AR-Meeting-Area">
+                <a href="/wiki/SICT_AR_Meeting_Area">SICT AR Meeting Area</a>
+              </li>
+              <li id="n-People"><a href="/wiki/People">People</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="portal"
+          role="navigation"
+          id="p-get_involved_with_CDOT"
+          aria-labelledby="p-get_involved_with_CDOT-label"
+        >
+          <h3 id="p-get_involved_with_CDOT-label">get involved with CDOT</h3>
 
-			<div class="body">
-									<ul>
-						<li id="n-as-a-Student"><a href="/wiki/Category:Ways_to_Get_Involved_with_CDOT_-_Students">as a Student</a></li><li id="n-as-an-Open-Source-Community-Member"><a href="/wiki/FSOSS">as an Open Source Community Member</a></li><li id="n-as-a-Company"><a href="/wiki/CDOT_Partnership_Opportunities">as a Company</a></li>					</ul>
-							</div>
-		</div>
-			<div class="portal" role="navigation" id='p-courses' aria-labelledby='p-courses-label'>
-			<h3 id='p-courses-label'>courses</h3>
+          <div class="body">
+            <ul>
+              <li id="n-as-a-Student">
+                <a href="/wiki/Category:Ways_to_Get_Involved_with_CDOT_-_Students">as a Student</a>
+              </li>
+              <li id="n-as-an-Open-Source-Community-Member">
+                <a href="/wiki/FSOSS">as an Open Source Community Member</a>
+              </li>
+              <li id="n-as-a-Company">
+                <a href="/wiki/CDOT_Partnership_Opportunities">as a Company</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="portal" role="navigation" id="p-courses" aria-labelledby="p-courses-label">
+          <h3 id="p-courses-label">courses</h3>
 
-			<div class="body">
-									<ul>
-						<li id="n-BTC640"><a href="/wiki/BTC640">BTC640</a></li><li id="n-BTH740"><a href="/wiki/BTH740">BTH740</a></li><li id="n-BTP300"><a href="/wiki/BTP300">BTP300</a></li><li id="n-DPI908"><a href="/wiki/DPI908">DPI908</a></li><li id="n-DPS901"><a href="/wiki/DPS901">DPS901</a></li><li id="n-DPS905"><a href="/wiki/DPS905">DPS905</a></li><li id="n-DPS909"><a href="/wiki/DPS909">DPS909</a></li><li id="n-DPS911"><a href="/wiki/DPS911">DPS911</a></li><li id="n-DPS914"><a href="/wiki/DPS914">DPS914</a></li><li id="n-DPS915"><a href="/wiki/DPS915">DPS915</a></li><li id="n-DPS924"><a href="/wiki/DPS924">DPS924</a></li><li id="n-DPS931"><a href="/wiki/GAM531">DPS931</a></li><li id="n-EAC234"><a href="/wiki/EAC234">EAC234</a></li><li id="n-ECL500"><a href="/wiki/ECL500">ECL500</a></li><li id="n-GAM531"><a href="/wiki/GAM531">GAM531</a></li><li id="n-GAM666"><a href="/wiki/GAM666">GAM666</a></li><li id="n-GAM670"><a href="/wiki/GAM670">GAM670</a></li><li id="n-GPU610"><a href="/wiki/GPU610">GPU610</a></li><li id="n-LUX-Program"><a href="/wiki/LUX_Program">LUX Program</a></li><li id="n-MAP524"><a href="/wiki/MAP524">MAP524</a></li><li id="n-OOP344"><a href="/wiki/OOP344">OOP344</a></li><li id="n-OPS235"><a href="/wiki/OPS235">OPS235</a></li><li id="n-OPS335"><a href="/wiki/OPS335">OPS335</a></li><li id="n-OPS435"><a href="/wiki/OPS435_Python">OPS435</a></li><li id="n-OPS535"><a href="/wiki/OPS535">OPS535</a></li><li id="n-OPS635"><a href="/wiki/OPS635">OPS635</a></li><li id="n-OSD600"><a href="/wiki/OSD600">OSD600</a></li><li id="n-OSD700"><a href="/wiki/OSD700">OSD700</a></li><li id="n-Real-World-Mozilla"><a href="/wiki/Real_World_Mozilla">Real World Mozilla</a></li><li id="n-SBR600"><a href="/wiki/SBR600">SBR600</a></li><li id="n-SEC520"><a href="/wiki/SEC520">SEC520</a></li><li id="n-SPO600"><a href="/wiki/SPO600">SPO600</a></li><li id="n-SRT210"><a href="/wiki/SRT210">SRT210</a></li><li id="n-ULI101"><a href="/wiki/ULI101">ULI101</a></li>					</ul>
-							</div>
-		</div>
-			<div class="portal" role="navigation" id='p-course_projects' aria-labelledby='p-course_projects-label'>
-			<h3 id='p-course_projects-label'>course projects</h3>
+          <div class="body">
+            <ul>
+              <li id="n-BTC640"><a href="/wiki/BTC640">BTC640</a></li>
+              <li id="n-BTH740"><a href="/wiki/BTH740">BTH740</a></li>
+              <li id="n-BTP300"><a href="/wiki/BTP300">BTP300</a></li>
+              <li id="n-DPI908"><a href="/wiki/DPI908">DPI908</a></li>
+              <li id="n-DPS901"><a href="/wiki/DPS901">DPS901</a></li>
+              <li id="n-DPS905"><a href="/wiki/DPS905">DPS905</a></li>
+              <li id="n-DPS909"><a href="/wiki/DPS909">DPS909</a></li>
+              <li id="n-DPS911"><a href="/wiki/DPS911">DPS911</a></li>
+              <li id="n-DPS914"><a href="/wiki/DPS914">DPS914</a></li>
+              <li id="n-DPS915"><a href="/wiki/DPS915">DPS915</a></li>
+              <li id="n-DPS924"><a href="/wiki/DPS924">DPS924</a></li>
+              <li id="n-DPS931"><a href="/wiki/GAM531">DPS931</a></li>
+              <li id="n-EAC234"><a href="/wiki/EAC234">EAC234</a></li>
+              <li id="n-ECL500"><a href="/wiki/ECL500">ECL500</a></li>
+              <li id="n-GAM531"><a href="/wiki/GAM531">GAM531</a></li>
+              <li id="n-GAM666"><a href="/wiki/GAM666">GAM666</a></li>
+              <li id="n-GAM670"><a href="/wiki/GAM670">GAM670</a></li>
+              <li id="n-GPU610"><a href="/wiki/GPU610">GPU610</a></li>
+              <li id="n-LUX-Program"><a href="/wiki/LUX_Program">LUX Program</a></li>
+              <li id="n-MAP524"><a href="/wiki/MAP524">MAP524</a></li>
+              <li id="n-OOP344"><a href="/wiki/OOP344">OOP344</a></li>
+              <li id="n-OPS235"><a href="/wiki/OPS235">OPS235</a></li>
+              <li id="n-OPS335"><a href="/wiki/OPS335">OPS335</a></li>
+              <li id="n-OPS435"><a href="/wiki/OPS435_Python">OPS435</a></li>
+              <li id="n-OPS535"><a href="/wiki/OPS535">OPS535</a></li>
+              <li id="n-OPS635"><a href="/wiki/OPS635">OPS635</a></li>
+              <li id="n-OSD600"><a href="/wiki/OSD600">OSD600</a></li>
+              <li id="n-OSD700"><a href="/wiki/OSD700">OSD700</a></li>
+              <li id="n-Real-World-Mozilla">
+                <a href="/wiki/Real_World_Mozilla">Real World Mozilla</a>
+              </li>
+              <li id="n-SBR600"><a href="/wiki/SBR600">SBR600</a></li>
+              <li id="n-SEC520"><a href="/wiki/SEC520">SEC520</a></li>
+              <li id="n-SPO600"><a href="/wiki/SPO600">SPO600</a></li>
+              <li id="n-SRT210"><a href="/wiki/SRT210">SRT210</a></li>
+              <li id="n-ULI101"><a href="/wiki/ULI101">ULI101</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="portal"
+          role="navigation"
+          id="p-course_projects"
+          aria-labelledby="p-course_projects-label"
+        >
+          <h3 id="p-course_projects-label">course projects</h3>
 
-			<div class="body">
-									<ul>
-						<li id="n-Course-Project-List"><a href="/wiki/Project_List">Course Project List</a></li><li id="n-Potential-Course-Projects"><a href="/wiki/Potential_Projects">Potential Course Projects</a></li><li id="n-Contrib-Opportunities"><a href="/wiki/Contrib_Opportunities">Contrib Opportunities</a></li>					</ul>
-							</div>
-		</div>
-			<div class="portal" role="navigation" id='p-links' aria-labelledby='p-links-label'>
-			<h3 id='p-links-label'>links</h3>
+          <div class="body">
+            <ul>
+              <li id="n-Course-Project-List">
+                <a href="/wiki/Project_List">Course Project List</a>
+              </li>
+              <li id="n-Potential-Course-Projects">
+                <a href="/wiki/Potential_Projects">Potential Course Projects</a>
+              </li>
+              <li id="n-Contrib-Opportunities">
+                <a href="/wiki/Contrib_Opportunities">Contrib Opportunities</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="portal" role="navigation" id="p-links" aria-labelledby="p-links-label">
+          <h3 id="p-links-label">links</h3>
 
-			<div class="body">
-									<ul>
-						<li id="n-CDOT"><a href="http://cdot.senecacollege.ca/" rel="nofollow">CDOT</a></li><li id="n-Planet-CDOT"><a href="http://zenit.senecacollege.ca/~chris.tyler/planet" rel="nofollow">Planet CDOT</a></li><li id="n-FSOSS"><a href="http://fsoss.ca/" rel="nofollow">FSOSS</a></li>					</ul>
-							</div>
-		</div>
-			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
-			<h3 id='p-tb-label'>Tools</h3>
+          <div class="body">
+            <ul>
+              <li id="n-CDOT"><a href="http://cdot.senecacollege.ca/" rel="nofollow">CDOT</a></li>
+              <li id="n-Planet-CDOT">
+                <a href="http://zenit.senecacollege.ca/~chris.tyler/planet" rel="nofollow"
+                  >Planet CDOT</a
+                >
+              </li>
+              <li id="n-FSOSS"><a href="http://fsoss.ca/" rel="nofollow">FSOSS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+          <h3 id="p-tb-label">Tools</h3>
 
-			<div class="body">
-									<ul>
-						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Planet_CDOT_Feed_List" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Planet_CDOT_Feed_List" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/w/index.php?title=Planet_CDOT_Feed_List&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/w/index.php?title=Planet_CDOT_Feed_List&amp;oldid=148304" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Planet_CDOT_Feed_List&amp;action=info" title="More information about this page">Page information</a></li>					</ul>
-							</div>
-		</div>
-				</div>
-		</div>
-		<div id="footer" role="contentinfo">
-							<ul id="footer-info">
-											<li id="footer-info-lastmod"> This page was last edited on 23 September 2020, at 10:14.</li>
-									</ul>
-							<ul id="footer-places">
-											<li id="footer-places-privacy"><a href="/wiki/CDOT_Wiki:Privacy_policy" title="CDOT Wiki:Privacy policy">Privacy policy</a></li>
-											<li id="footer-places-about"><a href="/wiki/CDOT_Wiki:About" title="CDOT Wiki:About">About CDOT Wiki</a></li>
-											<li id="footer-places-disclaimer"><a href="/wiki/CDOT_Wiki:General_disclaimer" title="CDOT Wiki:General disclaimer">Disclaimers</a></li>
-											<li id="footer-places-mobileview"><a href="https://wiki.cdot.senecacollege.ca/w/index.php?title=Planet_CDOT_Feed_List&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
-									</ul>
-										<ul id="footer-icons" class="noprint">
-											<li id="footer-poweredbyico">
-							<a href="//www.mediawiki.org/"><img src="/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
-									</ul>
-						<div style="clear:both"></div>
-		</div>
-		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.031","walltime":"0.060","ppvisitednodes":{"value":80,"limit":1000000},"ppgeneratednodes":{"value":271,"limit":1000000},"postexpandincludesize":{"value":1518,"limit":2097152},"templateargumentsize":{"value":970,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    7.272      1 -total","100.00%    7.272      1 Template:Admon/caution"," 55.25%    4.018      1 Template:Message"]},"cachereport":{"timestamp":"20200924141504","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":316});});</script>
-	</body>
+          <div class="body">
+            <ul>
+              <li id="t-whatlinkshere">
+                <a
+                  href="/wiki/Special:WhatLinksHere/Planet_CDOT_Feed_List"
+                  title="A list of all wiki pages that link here [j]"
+                  accesskey="j"
+                  >What links here</a
+                >
+              </li>
+              <li id="t-recentchangeslinked">
+                <a
+                  href="/wiki/Special:RecentChangesLinked/Planet_CDOT_Feed_List"
+                  rel="nofollow"
+                  title="Recent changes in pages linked from this page [k]"
+                  accesskey="k"
+                  >Related changes</a
+                >
+              </li>
+              <li id="t-specialpages">
+                <a
+                  href="/wiki/Special:SpecialPages"
+                  title="A list of all special pages [q]"
+                  accesskey="q"
+                  >Special pages</a
+                >
+              </li>
+              <li id="t-print">
+                <a
+                  href="/w/index.php?title=Planet_CDOT_Feed_List&amp;printable=yes"
+                  rel="alternate"
+                  title="Printable version of this page [p]"
+                  accesskey="p"
+                  >Printable version</a
+                >
+              </li>
+              <li id="t-permalink">
+                <a
+                  href="/w/index.php?title=Planet_CDOT_Feed_List&amp;oldid=148304"
+                  title="Permanent link to this revision of the page"
+                  >Permanent link</a
+                >
+              </li>
+              <li id="t-info">
+                <a
+                  href="/w/index.php?title=Planet_CDOT_Feed_List&amp;action=info"
+                  title="More information about this page"
+                  >Page information</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer" role="contentinfo">
+      <ul id="footer-info">
+        <li id="footer-info-lastmod">This page was last edited on 23 September 2020, at 10:14.</li>
+      </ul>
+      <ul id="footer-places">
+        <li id="footer-places-privacy">
+          <a href="/wiki/CDOT_Wiki:Privacy_policy" title="CDOT Wiki:Privacy policy"
+            >Privacy policy</a
+          >
+        </li>
+        <li id="footer-places-about">
+          <a href="/wiki/CDOT_Wiki:About" title="CDOT Wiki:About">About CDOT Wiki</a>
+        </li>
+        <li id="footer-places-disclaimer">
+          <a href="/wiki/CDOT_Wiki:General_disclaimer" title="CDOT Wiki:General disclaimer"
+            >Disclaimers</a
+          >
+        </li>
+        <li id="footer-places-mobileview">
+          <a
+            href="https://wiki.cdot.senecacollege.ca/w/index.php?title=Planet_CDOT_Feed_List&amp;mobileaction=toggle_view_mobile"
+            class="noprint stopMobileRedirectToggle"
+            >Mobile view</a
+          >
+        </li>
+      </ul>
+      <ul id="footer-icons" class="noprint">
+        <li id="footer-poweredbyico">
+          <a href="//www.mediawiki.org/"
+            ><img
+              src="/w/resources/assets/poweredby_mediawiki_88x31.png"
+              alt="Powered by MediaWiki"
+              srcset="
+                /w/resources/assets/poweredby_mediawiki_132x47.png 1.5x,
+                /w/resources/assets/poweredby_mediawiki_176x62.png 2x
+              "
+              width="88"
+              height="31"
+          /></a>
+        </li>
+      </ul>
+      <div style="clear: both"></div>
+    </div>
+    <script>
+      (window.RLQ = window.RLQ || []).push(function () {
+        mw.config.set({
+          wgPageParseReport: {
+            limitreport: {
+              cputime: '0.031',
+              walltime: '0.060',
+              ppvisitednodes: { value: 80, limit: 1000000 },
+              ppgeneratednodes: { value: 271, limit: 1000000 },
+              postexpandincludesize: { value: 1518, limit: 2097152 },
+              templateargumentsize: { value: 970, limit: 2097152 },
+              expansiondepth: { value: 4, limit: 40 },
+              expensivefunctioncount: { value: 0, limit: 100 },
+              timingprofile: [
+                '100.00%    7.272      1 -total',
+                '100.00%    7.272      1 Template:Admon/caution',
+                ' 55.25%    4.018      1 Template:Message',
+              ],
+            },
+            cachereport: { timestamp: '20200924141504', ttl: 86400, transientcontent: false },
+          },
+        });
+      });
+    </script>
+    <script>
+      (window.RLQ = window.RLQ || []).push(function () {
+        mw.config.set({ wgBackendResponseTime: 316 });
+      });
+    </script>
+  </body>
 </html>
