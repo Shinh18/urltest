@@ -23,5 +23,5 @@ Command-line tool for finding and reporting dead links (e.g., broken URLs) in a 
 
 #### Usage - ESLint
 
-- Check all files with Linter - `npm run line`
+- Check all files with Linter - `npm run lint`
 - Check all files with Linter and fix issues - `npm run eslint-fix`
