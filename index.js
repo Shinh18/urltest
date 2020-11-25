@@ -33,5 +33,3 @@ else {
     fileHandler.processFile(filePath, false, 'none');
   }
 }
-
-
