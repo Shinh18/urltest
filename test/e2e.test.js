@@ -6,11 +6,7 @@ describe('end-to-end integration', () => {
     const { stderr, stdout, exitCode } = await run();
     expect(exitCode).toBe(0);
     expect(stderr).toMatchSnapshot();
-    expect(stdout).toEqual('Standard user manual················---------------------------------------------------
-urltester filename       reports good,bad,unknown urls
-urltester -v |version    displays tool version
-urltester -j |json | j   displays output in JSON form
-----------------------------------------------------');
+    expect(stdout).toEqual('');
   });
   /*
   test('when argument --help is specified should print help message', async () => {
