@@ -4,7 +4,7 @@ const boxen = require('boxen');
 const boxenOptions = require('./style/style');
 const chalk = require('chalk');
 const path = require('path');
-const yargs = require('yargs');
+//const yargs = require('yargs');
 const fileHandler = require('./utils/processFile');
 const { printManual } = require('./utils/printManual');
 
@@ -64,4 +64,3 @@ else {
     fileHandler.processFile(filePath, false, 'none');
   }
 }
-
