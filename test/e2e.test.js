@@ -9,11 +9,4 @@ describe('end-to-end integration', () => {
     expect(stderr).toMatchSnapshot();
     expect(stdout).toEqual(printManual());
   });
-
-  test('when argument --help is specified should print help message', async () => {
-    const { stderr, stdout, exitCode } = await run('--help');
-    expect(exitCode).toBe(0);
-    expect(stderr).toMatchSnapshot();
-    expect(stdout).toEqual(printManual());
-  });
 });
