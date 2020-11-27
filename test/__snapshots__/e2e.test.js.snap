@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`end-to-end integration when argument --help is specified should print help message 1`] = `"source/urltester/node_modules/term-size/vendor/macos/term-size: /Users/muskan/Desktop/open: No such file or directory"`;
+
 exports[`end-to-end integration when no arguments passed prints error and help message 1`] = `"source/urltester/node_modules/term-size/vendor/macos/term-size: /Users/muskan/Desktop/open: No such file or directory"`;

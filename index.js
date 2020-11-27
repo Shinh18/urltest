@@ -9,7 +9,7 @@ const { printManual } = require('./utils/printManual');
 
 const version = boxen(chalk.redBright.bold('Urltester 1.0.0'), boxenOptions);
 
-if (process.argv.length == 2) printManual();
+if (process.argv.length == 2 || process.argv[2] === '--help') console.log(printManual());
 else if (process.argv[2] === 'version' || process.argv[2] === '-v') console.log(version);
 else {
   const filePath = path.join(__dirname, process.argv[2]);
