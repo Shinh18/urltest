@@ -1,6 +1,6 @@
 {
   "name": "urltester",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Command-line tool for finding and reporting dead links (e.g., broken URLs) in a file",
   "main": "index.js",
   "bin": {
