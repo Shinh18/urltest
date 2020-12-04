@@ -30,7 +30,7 @@
   ],
   "preferGlobal": true,
   "author": "Muskan Shinh",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Shinh18/urltest/issues"
   },
